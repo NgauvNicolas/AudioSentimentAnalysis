@@ -44,37 +44,37 @@ Les CNN détectent des motifs dans des matrices comme les MFCC, à travers des c
 
 La matrice de confusion permet d'analyser les prédictions correctes et incorrectes par rapport aux étiquettes réelles des données de test. Voici ce que l'on observe avec l'hypothèse d'association des classes suivante :
 
-    Classe 0 → Angry
-    Classe 1 → Calm
-    Classe 2 → Fearful
-    Classe 3 → Happy
-    Classe 4 → Sad
+Classe 0 → Angry<br>
+Classe 1 → Calm<br>
+Classe 2 → Fearful<br>
+Classe 3 → Happy<br>
+Classe 4 → Sad<br>
 
 Observations détaillées :
 
-    Angry (0) :
-        Prédictions Correctes : 26
-        Prédictions Incorrectes : 5 prédictions vers la classe "Happy" (3).
-        Interprétation : Le modèle parvient généralement à bien reconnaître la classe "Angry", mais une confusion persiste avec "Happy". Cela peut s'expliquer par des caractéristiques acoustiques similaires entre des émotions intenses comme la colère et le bonheur.
+Angry (0) :<br>
+Prédictions Correctes : 26<br>
+Prédictions Incorrectes : 5 prédictions vers la classe "Happy" (3).<br>
+Interprétation : Le modèle parvient généralement à bien reconnaître la classe "Angry", mais une confusion persiste avec "Happy". Cela peut s'expliquer par des caractéristiques acoustiques similaires entre des émotions intenses comme la colère et le bonheur.
 
-    Calm (1) :
-        Prédictions Correctes : 25
-        Prédictions Incorrectes : 3 erreurs vers "Happy" (3) et 6 erreurs vers "Sad" (4).
-        Interprétation : Les échantillons "Calm" sont souvent confondus avec "Happy" et "Sad". Cela est compréhensible, car une voix calme peut être difficile à distinguer d'une voix légèrement triste ou posée dans le contexte audio.
+Calm (1) :<br>
+Prédictions Correctes : 25<br>
+Prédictions Incorrectes : 3 erreurs vers "Happy" (3) et 6 erreurs vers "Sad" (4).<br>
+Interprétation : Les échantillons "Calm" sont souvent confondus avec "Happy" et "Sad". Cela est compréhensible, car une voix calme peut être difficile à distinguer d'une voix légèrement triste ou posée dans le contexte audio.
 
-    Fearful (2) :
-        Prédictions Correctes : 33
-        Prédictions Incorrectes : 2 erreurs vers "Calm" (1), 2 vers "Happy" (3), et 5 vers "Sad" (4).
-        Interprétation : Le modèle reconnaît bien "Fearful" dans la majorité des cas, mais il semble confondre la peur avec des états tristes ou calmes. Ceci peut indiquer que certaines caractéristiques acoustiques associées à la peur (comme un ton bas ou tremblant) peuvent ressembler à celles d'une tristesse prononcée.
+Fearful (2) :<br>
+Prédictions Correctes : 33<br>
+Prédictions Incorrectes : 2 erreurs vers "Calm" (1), 2 vers "Happy" (3), et 5 vers "Sad" (4).<br>
+Interprétation : Le modèle reconnaît bien "Fearful" dans la majorité des cas, mais il semble confondre la peur avec des états tristes ou calmes. Ceci peut indiquer que certaines caractéristiques acoustiques associées à la peur (comme un ton bas ou tremblant) peuvent ressembler à celles d'une tristesse prononcée.
 
-    Happy (3) :
-        Prédictions Correctes : 24
-        Prédictions Incorrectes : 6 erreurs vers "Angry" (0), 2 vers "Calm" (1), 3 vers "Fearful" (2), et 5 vers "Sad" (4).
-        Interprétation : La classe "Happy" est souvent confondue avec les autres émotions, notamment "Angry" et "Sad". Cela peut être dû à la diversité des expressions vocales du bonheur, qui peuvent parfois être interprétées comme des émotions intenses ou mélancoliques.
+Happy (3) :<br>
+Prédictions Correctes : 24<br>
+Prédictions Incorrectes : 6 erreurs vers "Angry" (0), 2 vers "Calm" (1), 3 vers "Fearful" (2), et 5 vers "Sad" (4).<br>
+Interprétation : La classe "Happy" est souvent confondue avec les autres émotions, notamment "Angry" et "Sad". Cela peut être dû à la diversité des expressions vocales du bonheur, qui peuvent parfois être interprétées comme des émotions intenses ou mélancoliques.
 
-    Sad (4) :
-        Prédictions Correctes : 30
-        Prédictions Incorrectes : 1 erreur vers "Angry" (0), 8 vers "Calm" (1), et 5 vers "Fearful" (2).
+Sad (4) :<br>
+        Prédictions Correctes : 30<br>
+        Prédictions Incorrectes : 1 erreur vers "Angry" (0), 8 vers "Calm" (1), et 5 vers "Fearful" (2).<br>
         Interprétation : "Sad" est globalement bien reconnue, mais il existe des confusions significatives avec "Calm". Cette confusion est fréquente dans les modèles de classification audio, car des émotions comme la tristesse et le calme partagent souvent des tonalités douces et des rythmes lents.
 
 
