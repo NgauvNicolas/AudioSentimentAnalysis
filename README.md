@@ -23,6 +23,23 @@ Placer le dataset dans le dossier `data/`.
 
 ## CNN Nicolas 🧑🏻‍💻
 
+Conformément à l'article, on utilise un modèle CNN entrainé sur une partie du dataset RAVDESS (80%) pour effectuer une classification des sentiments détectés dans une autre partie du dataset RAVDESS (20%), afin d'évaluer le modèle CNN.
+Les CNN détectent des motifs dans des matrices comme les MFCC, à travers des couches convolutionnelles, d'activation et de pooling. Cela permet de construire des modèles capables de classifier les données avec efficacité.
+
+### Résultats :
+
+![CNN Training Validation Metrics](plots/CNN_training_validation_metrics.png)
+
+![CNN Confusion Matrix](plots/CNN_confusion_matrix.png)
+
+**Training Accuracy** : 97,93%
+
+**Validation Accuracy** : 71,88%
+
+**Training Loss** : 1,357
+
+**Validation Loss** : 0,029
+
 ## LSTM Jeevya 👩🏽‍💻
 
 ## SVM (Support Vector Machine) Anissa👩🏾‍💻
