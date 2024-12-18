@@ -40,6 +40,8 @@ Conformément à l'article, on utilise un modèle CNN entrainé sur une partie d
 
 Les CNN détectent des motifs dans des matrices comme les MFCC, à travers des couches convolutionnelles, d'activation et de pooling. Cela permet de construire des modèles capables de classifier les données avec efficacité.
 
+Dans les prochaines étapes, on essaiera de jouer avec la régularisation (Dropout ou L2) et/ou un apprentissage plus lent et progressif (avec un learning rate scheduler) pour essayer de stabiliser l'entraînement, d'éviter le sur-apprentissage et d'améliorer la capacité de généralisation du modèle.
+
 ### Résultats :
 
 ![CNN Training Validation Metrics](plots/CNN_training_validation_metrics.png)
@@ -86,9 +88,9 @@ Prédictions Incorrectes : 6 erreurs vers "Angry" (0), 2 vers "Calm" (1), 3 vers
 Interprétation : La classe "Happy" est souvent confondue avec les autres émotions, notamment "Angry" et "Sad". Cela peut être dû à la diversité des expressions vocales du bonheur, qui peuvent parfois être interprétées comme des émotions intenses ou mélancoliques.
 
 Sad (4) :<br>
-        Prédictions Correctes : 30<br>
-        Prédictions Incorrectes : 1 erreur vers "Angry" (0), 8 vers "Calm" (1), et 5 vers "Fearful" (2).<br>
-        Interprétation : "Sad" est globalement bien reconnue, mais il existe des confusions significatives avec "Calm". Cette confusion est fréquente dans les modèles de classification audio, car des émotions comme la tristesse et le calme partagent souvent des tonalités douces et des rythmes lents.
+Prédictions Correctes : 30<br>
+Prédictions Incorrectes : 1 erreur vers "Angry" (0), 8 vers "Calm" (1), et 5 vers "Fearful" (2).<br>
+Interprétation : "Sad" est globalement bien reconnue, mais il existe des confusions significatives avec "Calm". Cette confusion est fréquente dans les modèles de classification audio, car des émotions comme la tristesse et le calme partagent souvent des tonalités douces et des rythmes lents.
 
 
 ## SVM (Support Vector Machine) Anissa👩🏾‍💻
