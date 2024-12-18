@@ -21,6 +21,10 @@ curl -L -o ~/Downloads/ravdess-emotional-song-audio.zip\
 **ATTENTION** Il faut obligatoirement supprimer les dossiers `audio_speech_actors_01-24/` et `audio_song_actors_01-24/` présents dans les dossiers téléchargés car ils contiennent des doublons et peuvent donc influencer les résultats obtenus sur le test set.
 Placer le dataset dans le dossier `data/`.
 
+
+## LSTM Jeevya 👩🏽‍💻
+
+
 ## CNN Nicolas 🧑🏻‍💻
 
 Conformément à l'article, on utilise un modèle CNN entrainé sur une partie du dataset RAVDESS (80%) pour effectuer une classification des sentiments détectés dans une autre partie du dataset RAVDESS (20%), afin d'évaluer le modèle CNN.
@@ -77,9 +81,6 @@ Sad (4) :<br>
         Prédictions Incorrectes : 1 erreur vers "Angry" (0), 8 vers "Calm" (1), et 5 vers "Fearful" (2).<br>
         Interprétation : "Sad" est globalement bien reconnue, mais il existe des confusions significatives avec "Calm". Cette confusion est fréquente dans les modèles de classification audio, car des émotions comme la tristesse et le calme partagent souvent des tonalités douces et des rythmes lents.
 
-
-
-## LSTM Jeevya 👩🏽‍💻
 
 ## SVM (Support Vector Machine) Anissa👩🏾‍💻
 
