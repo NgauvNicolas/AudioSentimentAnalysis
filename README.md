@@ -36,7 +36,7 @@ Les CNN détectent des motifs dans des matrices comme les MFCC, à travers des c
 
 **Training Loss** : 1,357
 
-**Validation Loss** : 0,029
+**Validation Loss** : 0,036
 
 ![CNN Confusion Matrix](plots/CNN_confusion_matrix.png)
 
