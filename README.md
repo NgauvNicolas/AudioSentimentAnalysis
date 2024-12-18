@@ -1,5 +1,6 @@
 # AudioSentimentAnalysis
 Projet de sentiment analysis sur le corpus audio RAVDESS
+Article de référence : Singh, P. Nagrath, P. (2022). Vocal Analysis and Sentiment Discernment using AI. *Fusion: Practice and Applications*, (), 100-109. DOI: https://doi.org/10.54216/FPA.070204
 
 ## Auteurs
 - AROUN Jeevya
@@ -21,9 +22,17 @@ curl -L -o ~/Downloads/ravdess-emotional-song-audio.zip\
 **ATTENTION** Il faut obligatoirement supprimer les dossiers `audio_speech_actors_01-24/` et `audio_song_actors_01-24/` présents dans les dossiers téléchargés car ils contiennent des doublons et peuvent donc influencer les résultats obtenus sur le test set.
 Placer le dataset dans le dossier `data/`.
 
+### 2. Lancer les scripts
+```
+python3 train_with_LSTM.py
+python3 train_with_CNN.py
+python3 script_svm.py
+```
 
 ## LSTM Jeevya 👩🏽‍💻
-
+Nous avons créé un script python qui permet d'entrainer un modèle LSTM sur la reconnaissance de sentiments sur des extraits audio parlés et chantés provenant du corpus RAVDESS Speech & Song.
+Comme dans le papier de référence, nous utilisons uniquement les labels 'sad', 'calm', 'happy', 'angry' et 'fearful' pour essayer d'avoir une meilleur accuracy en éliminant les émotions les plus difficile à discerner.
+On utilise un split train/test de respectivement 80% et 20% du corpus. L'entrainement se fait sur 70 epochs. Les hyperparamètres utilisés ne sont pas précisés dans l'article donc nous testons par nous même des valeurs. Nous obtenons avec notre modèle **66% d'accuracy** sur le test set. Dans les prochaines étapes, nous comptons utiliser GridSearch pour essayer de trouver de meilleurs hyperparamètres et améliorer l'accuracy du modèle.
 
 ## CNN Nicolas 🧑🏻‍💻
 
