@@ -36,9 +36,9 @@ On utilise un split train/test de respectivement 80% et 20% du corpus. L'entrain
 
 ## CNN Nicolas 🧑🏻‍💻
 
-Conformément à l'article, on utilise un modèle CNN entrainé sur une partie du dataset RAVDESS (80%) pour effectuer une classification des sentiments détectés dans une autre partie du dataset RAVDESS (20%), afin d'évaluer le modèle CNN.
+Conformément à l'article, on utilise un modèle de **réseau de neurones convolutifs** (ou réseau de neurones à convolution) entrainé sur une partie du dataset RAVDESS (80%) pour effectuer une classification des sentiments détectés dans une autre partie du dataset RAVDESS (20%), afin d'évaluer le modèle CNN.
 
-Les CNN détectent des motifs dans des matrices comme les MFCC, à travers des couches convolutionnelles, d'activation et de pooling. Cela permet de construire des modèles capables de classifier les données avec efficacité.
+Les CNN détectent des motifs dans des matrices comme les **MFCC**, à travers des couches convolutionnelles, d'activation et de pooling. Cela permet de construire des modèles capables de classifier les données avec efficacité.
 
 Ici, on a essayé de jouer avec la régularisation (Dropout ou L2) et un apprentissage plus lent et progressif (avec un learning rate scheduler) pour essayer de stabiliser l'entraînement, d'éviter le sur-apprentissage et d'améliorer la capacité de généralisation du modèle.
 
